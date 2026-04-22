@@ -16,7 +16,6 @@ import Certifications from '@/components/sections/Certifications'
 import Projects from '@/components/sections/Projects'
 import Results from '@/components/sections/Results'
 import About from '@/components/sections/About'
-import Pricing from '@/components/sections/Pricing'
 import FAQ from '@/components/sections/FAQ'
 import ContactForm from '@/components/sections/ContactForm'
 import CustomCursor from '@/components/ui/CustomCursor'
@@ -34,14 +33,15 @@ export default function Page() {
       <main>
         <Hero lang={lang} bannerVisible={bannerVisible} />
         <MarqueeSection />
-        <Manifesto lang={lang} />
+        <div className="hidden md:block">
+          <Manifesto lang={lang} />
+        </div>
         <Services lang={lang} />
         <Process lang={lang} />
         <Certifications lang={lang} />
         <Projects lang={lang} />
         <Results lang={lang} />
         <About lang={lang} />
-        <Pricing lang={lang} />
         <FAQ lang={lang} />
         <ContactForm lang={lang} />
       </main>
