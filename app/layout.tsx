@@ -16,16 +16,38 @@ const dmSans = DM_Sans({
   display: 'swap',
 })
 
+const BASE_URL = 'https://delsur-digital.com'
+
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
   title: 'DELSUR · Diseño Web y Google Ads · Valencia',
-  description: 'Diseño, desarrollo y Google Ads para negocios que quieren resultados reales. Sin agencia. Sin plantillas. Desde el sur del mundo.',
+  description: 'Diseño, desarrollo y Google Ads para negocios que quieren resultados reales. Sin agencia. Sin plantillas. Ahora en Valencia.',
   keywords: 'diseño web Valencia, Google Ads Valencia, CRO, Next.js, WordPress, freelance web Valencia',
   authors: [{ name: 'Brenda · DELSUR' }],
+  alternates: {
+    canonical: BASE_URL,
+  },
   openGraph: {
     title: 'DELSUR · Diseño Web y Google Ads · Valencia',
-    description: 'Del sur del mundo, para cualquier lado.',
+    description: 'Diseño, desarrollo y Google Ads para negocios que quieren resultados reales. Sin agencia. Sin plantillas. Ahora en Valencia.',
     type: 'website',
     locale: 'es_ES',
+    url: BASE_URL,
+    siteName: 'DELSUR',
+    images: [
+      {
+        url: '/images/delsur1.png',
+        width: 1200,
+        height: 630,
+        alt: 'DELSUR · Diseño Web y Google Ads · Valencia',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'DELSUR · Diseño Web y Google Ads · Valencia',
+    description: 'Diseño, desarrollo y Google Ads para negocios que quieren resultados reales. Sin agencia. Sin plantillas. Ahora en Valencia.',
+    images: ['/images/delsur1.png'],
   },
 }
 
