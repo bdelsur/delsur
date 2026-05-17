@@ -93,13 +93,9 @@ export default function Hero({ lang, bannerVisible }: Props) {
         <p
           className="font-dm font-light max-w-2xl mb-10 leading-relaxed"
           style={{ fontSize: 'clamp(15px, 1.8vw, 20px)', color: 'var(--mid)' }}
-          dangerouslySetInnerHTML={{
-            __html: t.sub.replace(
-              /resultados reales, no métricas de vanidad\.|real results, not vanity metrics\./,
-              m => `<strong style="color:var(--ink)">${m}</strong>`
-            ),
-          }}
-        />
+        >
+          {t.sub}
+        </p>
 
         {/* CTAs */}
         <div className="flex flex-wrap gap-4">
@@ -122,6 +118,11 @@ export default function Hero({ lang, bannerVisible }: Props) {
             {t.cta2}
           </a>
         </div>
+
+        {/* Location detail */}
+        <p className="font-dm text-xs mt-6" style={{ color: 'var(--soft)', letterSpacing: '0.06em' }}>
+          — {t.location}
+        </p>
       </div>
 
       {/* Scroll indicator */}
