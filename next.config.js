@@ -31,11 +31,12 @@ const nextConfig = {
               "default-src 'self'",
               // 'unsafe-inline' requerido: Next.js inyecta scripts de hidratación inline
               // y el toggle de tema usa dangerouslySetInnerHTML
-              "script-src 'self' 'unsafe-inline'",
+              "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "font-src 'self' https://fonts.gstatic.com",
-              "img-src 'self' data:",
-              "connect-src 'self'",
+              "img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com",
+              "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://pagead2.googlesyndication.com",
+              "frame-src https://www.googletagmanager.com",
               "frame-ancestors 'none'",
               "form-action 'self'",
               "base-uri 'self'",
