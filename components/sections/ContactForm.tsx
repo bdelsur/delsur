@@ -26,6 +26,13 @@ export default function ContactForm({ lang }: Props) {
   function handleChoice(choice: Need) {
     setNeed(choice)
     setStep(1)
+    if (typeof window !== 'undefined') {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'seleccion_servicio',
+        servicio: choice
+      });
+    }
   }
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) {
@@ -45,6 +52,13 @@ export default function ContactForm({ lang }: Props) {
       })
       if (!res.ok) throw new Error('Error sending')
       setStep(2)
+      if (typeof window !== 'undefined') {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'envio_formulario',
+          servicio_seleccionado: need
+        });
+      }
     } catch {
       setError(lang === 'es'
         ? 'Algo salió mal. Intentá de nuevo o escribime por WhatsApp.'
