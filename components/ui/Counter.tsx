@@ -28,9 +28,14 @@ interface CounterProps {
   triggered: boolean
   prefix?: string
   suffix?: string
+  decimals?: number
 }
 
-export default function Counter({ target, duration, triggered, prefix = '', suffix = '' }: CounterProps) {
-  const value = useCounter(target, duration, triggered)
-  return <>{prefix}{value}{suffix}</>
+export default function Counter({ target, duration, triggered, prefix = '', suffix = '', decimals = 0 }: CounterProps) {
+  const scale = Math.pow(10, decimals)
+  const raw = useCounter(Math.round(target * scale), duration, triggered)
+  const display = decimals > 0
+    ? (raw / scale).toFixed(decimals).replace('.', ',')
+    : raw
+  return <>{prefix}{display}{suffix}</>
 }

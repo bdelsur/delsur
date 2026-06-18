@@ -20,16 +20,16 @@ const BASE_URL = 'https://delsur-digital.com'
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
-  title: 'DELSUR · Diseño Web y Google Ads · Valencia',
-  description: 'Diseño, desarrollo y Google Ads para negocios que quieren resultados reales. Sin agencia. Sin plantillas. Ahora en Valencia.',
-  keywords: 'diseño web Valencia, Google Ads Valencia, CRO, Next.js, WordPress, freelance web Valencia',
-  authors: [{ name: 'Brenda · DELSUR' }],
+  title: 'DELSUR · Google Ads · GA4 · CRO · Valencia',
+  description: 'Gestión de Google Ads, medición con GA4 y CRO para negocios de Valencia. Más clientes desde Google y datos para saber cuánto te cuesta cada uno.',
+  keywords: 'Google Ads Valencia, GA4 Valencia, CRO Valencia, tracking Google Ads, gestión campañas Valencia',
+  authors: [{ name: 'DELSUR' }],
   alternates: {
     canonical: BASE_URL,
   },
   openGraph: {
-    title: 'DELSUR · Diseño Web y Google Ads · Valencia',
-    description: 'Diseño, desarrollo y Google Ads para negocios que quieren resultados reales. Sin agencia. Sin plantillas. Ahora en Valencia.',
+    title: 'DELSUR · Google Ads · GA4 · CRO · Valencia',
+    description: 'Gestión de Google Ads, medición con GA4 y CRO para negocios de Valencia. Más clientes desde Google y datos para saber cuánto te cuesta cada uno.',
     type: 'website',
     locale: 'es_ES',
     url: BASE_URL,
@@ -39,14 +39,14 @@ export const metadata: Metadata = {
         url: '/images/delsur1.png',
         width: 1200,
         height: 630,
-        alt: 'DELSUR · Diseño Web y Google Ads · Valencia',
+        alt: 'DELSUR · Google Ads · GA4 · CRO · Valencia',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DELSUR · Diseño Web y Google Ads · Valencia',
-    description: 'Diseño, desarrollo y Google Ads para negocios que quieren resultados reales. Sin agencia. Sin plantillas. Ahora en Valencia.',
+    title: 'DELSUR · Google Ads · GA4 · CRO · Valencia',
+    description: 'Gestión de Google Ads, medición con GA4 y CRO para negocios de Valencia. Más clientes desde Google y datos para saber cuánto te cuesta cada uno.',
     images: ['/images/delsur1.png'],
   },
 }

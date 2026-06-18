@@ -48,28 +48,6 @@ export default function Process({ lang }: Props) {
           ))}
         </div>
 
-        {/* AI block */}
-        <div
-          className="p-8 border-l-2 mt-12"
-          style={{ background: 'var(--card)', borderLeftColor: '#FF3319' }}
-        >
-          <div className="flex items-start gap-6">
-            <span
-              className="font-oswald font-bold text-lg flex-shrink-0 px-3 py-1"
-              style={{ background: '#FF3319', color: '#fff' }}
-            >
-              {t.ai.label}
-            </span>
-            <div>
-              <p className="font-dm font-medium mb-2" style={{ color: 'var(--ink)' }}>
-                {t.ai.title}
-              </p>
-              <p className="font-dm font-light text-sm leading-relaxed" style={{ color: 'var(--mid)' }}>
-                {t.ai.desc}
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   )

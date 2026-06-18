@@ -1,6 +1,6 @@
 const items = [
-  'Diseño Web', 'Google Ads', 'CRO', 'GTM', 'GA4',
-  'Next.js', 'WordPress', 'Tracking', 'Valencia', 'España', 'Patagonia → Valencia',
+  'Google Ads', 'GA4', 'CRO', 'GTM', 'Tracking',
+  'WordPress', 'Next.js', 'Medición', 'Valencia', 'España',
 ]
 
 function MarqueeContent() {

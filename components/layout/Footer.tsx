@@ -43,28 +43,6 @@ export default function Footer({ lang }: Props) {
                   <span className="font-dm text-sm" style={{ color: '#A0A0A0' }}>{c}</span>
                 </li>
               ))}
-              <li>
-                <a
-                  href="https://linkedin.com/in/brenda-c-alaniz-/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-dm text-sm hover:opacity-100 transition-opacity"
-                  style={{ color: '#A0A0A0' }}
-                >
-                  LinkedIn ↗
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/bitwork-creator"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-dm text-sm hover:opacity-100 transition-opacity"
-                  style={{ color: '#A0A0A0' }}
-                >
-                  GitHub ↗
-                </a>
-              </li>
             </ul>
           </div>
         </div>

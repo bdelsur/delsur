@@ -109,7 +109,9 @@ export default function Hero({ lang, bannerVisible }: Props) {
             {t.cta1}
           </a>
           <a
-            href="#proyectos"
+            href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || '34XXXXXXXXX'}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3.5 font-dm font-medium text-sm border transition-colors"
             style={{ color: 'var(--ink)', borderColor: 'var(--border)', background: 'transparent' }}
             onMouseEnter={e => (e.currentTarget.style.borderColor = 'var(--ink)')}

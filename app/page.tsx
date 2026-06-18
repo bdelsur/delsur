@@ -15,7 +15,7 @@ import Process from '@/components/sections/Process'
 import Certifications from '@/components/sections/Certifications'
 import Projects from '@/components/sections/Projects'
 import Results from '@/components/sections/Results'
-import About from '@/components/sections/About'
+import WebDev from '@/components/sections/WebDev'
 import FAQ from '@/components/sections/FAQ'
 import ContactForm from '@/components/sections/ContactForm'
 import CustomCursor from '@/components/ui/CustomCursor'
@@ -37,11 +37,12 @@ export default function Page() {
           <Manifesto lang={lang} />
         </div>
         <Services lang={lang} />
+        <WebDev lang={lang} />
         <Process lang={lang} />
         <Certifications lang={lang} />
         <Projects lang={lang} />
         <Results lang={lang} />
-        <About lang={lang} />
+        {/* TODO: layout gap — sección About eliminada (foto de perfil + bio personal). Considerar rellenar con CTA o bloque de certificaciones ampliado. */}
         <FAQ lang={lang} />
         <ContactForm lang={lang} />
       </main>

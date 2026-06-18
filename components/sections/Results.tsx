@@ -6,10 +6,11 @@ import Counter from '@/components/ui/Counter'
 
 interface Props { lang: Lang }
 
-const targets = [7, 43, 12]
+const targets = [7.04, 205, 9.5]
 const durations = [1600, 1400, 1100]
-const prefixes = ['', '+', '']
-const suffixes = ['€', '%', '+']
+const prefixes = ['', '', '']
+const suffixes = [' €', '', '%']
+const decimals = [2, 0, 1]
 
 export default function Results({ lang }: Props) {
   const t = T[lang].results
@@ -47,14 +48,16 @@ export default function Results({ lang }: Props) {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-          {t.stats.map((stat, i) => (
+          {t.stats.map((stat, i) => {
+            const before = (stat as { label: string; note: string; before?: string }).before
+            return (
             <div key={stat.label}>
               <p className="font-dm text-xs uppercase tracking-widest mb-3" style={{ color: 'rgba(255,255,255,0.6)' }}>
                 {stat.label}
               </p>
-              {stat.before && (
+              {before && (
                 <p className="font-oswald font-light line-through mb-1" style={{ fontSize: '24px', color: 'rgba(255,255,255,0.4)' }}>
-                  {stat.before}
+                  {before}
                 </p>
               )}
               <p className="font-oswald font-bold leading-none mb-2" style={{ fontSize: 'clamp(56px, 8vw, 96px)', color: '#fff' }}>
@@ -64,13 +67,15 @@ export default function Results({ lang }: Props) {
                   triggered={triggered}
                   prefix={prefixes[i]}
                   suffix={suffixes[i]}
+                  decimals={decimals[i]}
                 />
               </p>
               <p className="font-dm text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>
                 {stat.note}
               </p>
             </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>
