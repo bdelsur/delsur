@@ -54,7 +54,7 @@ export default function ContactForm({ lang }: Props) {
     }
   }
 
-  const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER || '34XXXXXXXXX'
+  const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER || '5491131250992'
   const waUrl = `https://wa.me/${waNumber}`
 
   const inputStyle = {

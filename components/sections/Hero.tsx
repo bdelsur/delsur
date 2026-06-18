@@ -109,7 +109,7 @@ export default function Hero({ lang, bannerVisible }: Props) {
             {t.cta1}
           </a>
           <a
-            href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || '34XXXXXXXXX'}`}
+            href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || '5491131250992'}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3.5 font-dm font-medium text-sm border transition-colors"
