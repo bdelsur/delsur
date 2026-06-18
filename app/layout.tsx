@@ -1,9 +1,6 @@
 import type { Metadata } from 'next'
 import { Oswald, DM_Sans } from 'next/font/google'
-import Script from 'next/script'
 import './globals.css'
-
-const GA_ID = process.env.NEXT_PUBLIC_GA4_ID
 
 const oswald = Oswald({
   subsets: ['latin'],
@@ -58,32 +55,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es" suppressHydrationWarning>
       <head>
+        {/* GA4 — justo después de <head> como indica Google */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LRV07HKC51" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `
-              try {
-                var s = localStorage.getItem('theme');
-                if (s !== 'light') {
-                  document.documentElement.classList.add('dark');
-                }
-              } catch(e) {}
-            `,
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LRV07HKC51');`,
+          }}
+        />
+        {/* Theme init */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var s=localStorage.getItem('theme');if(s!=='light'){document.documentElement.classList.add('dark');}}catch(e){}`,
           }}
         />
       </head>
       <body className={`${oswald.variable} ${dmSans.variable}`}>
         {children}
-        {GA_ID && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="ga4-init" strategy="afterInteractive">
-              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}
-            </Script>
-          </>
-        )}
       </body>
     </html>
   )
