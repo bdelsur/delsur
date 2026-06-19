@@ -23,6 +23,18 @@ export default function Projects({ lang }: Props) {
         />
       </div>
 
+      {/* Background photo (dark mode only) */}
+      <div className="absolute inset-0 pointer-events-none hidden dark:block">
+        <Image
+          src="/images/fotodelsur.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          style={{ objectPosition: 'right top', opacity: 0.2 }}
+        />
+        <div className="absolute inset-0" style={{ background: 'var(--warm)', opacity: 0.78 }} />
+      </div>
+
       <div className="max-w-7xl mx-auto px-6 py-24 relative">
         <h2
           className="font-oswald font-bold uppercase mb-16"

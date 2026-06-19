@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { T, Lang } from '@/lib/translations'
 
 interface Props { lang: Lang }
@@ -9,20 +8,8 @@ export default function Certifications({ lang }: Props) {
   const t = T[lang].certifications
 
   return (
-    <section className="relative overflow-hidden" style={{ background: 'var(--bg)' }}>
-      {/* Background photo (dark mode only) */}
-      <div className="absolute inset-0 pointer-events-none hidden dark:block">
-        <Image
-          src="/images/fotodelsur.jpg"
-          alt=""
-          fill
-          className="object-cover"
-          style={{ opacity: 0.2 }}
-        />
-        <div className="absolute inset-0" style={{ background: 'var(--bg)', opacity: 0.78 }} />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6 py-24 relative">
+    <section style={{ background: 'var(--bg)' }}>
+      <div className="max-w-7xl mx-auto px-6 py-24">
         <div className="flex items-baseline gap-3 mb-4">
           <h2
             className="font-oswald font-bold uppercase"
