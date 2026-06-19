@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { T, Lang } from '@/lib/translations'
 
 interface Props { lang: Lang }
@@ -6,8 +7,23 @@ export default function Footer({ lang }: Props) {
   const t = T[lang].footer
 
   return (
-    <footer style={{ background: '#020202', color: '#EDEDED' }}>
-      <div className="max-w-7xl mx-auto px-6 py-16">
+    <footer className="relative overflow-hidden" style={{ background: '#020202', color: '#EDEDED' }}>
+      {/* Background photo */}
+      <div className="absolute inset-0 pointer-events-none">
+        <Image
+          src="/images/fotodelsur1.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          style={{ objectPosition: 'right center', opacity: 0.35 }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(90deg, #020202 0%, #020202 45%, rgba(2,2,2,0.5) 75%, rgba(2,2,2,0.75) 100%)' }}
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 py-16 relative">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           {/* Logo col */}
           <div>
