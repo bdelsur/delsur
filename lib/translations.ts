@@ -28,7 +28,7 @@ export const T = {
     manifesto: {
       line1: 'Página web.',
       line2a: 'Perfil digital en Google + Publicidad',
-      line2b: 'Objetivo -> Más clientes',
+      line2b: 'Objetivo Más clientes',
       body: 'Cada proyecto parte de cero. El diseño tiene que servir a un objetivo real — captar un cliente, comunicar quién sos y diferenciarte.',
       signature: 'DELSUR · Valencia, España',
     },
