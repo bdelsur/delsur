@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { T, Lang } from '@/lib/translations'
 
 interface Props { lang: Lang }
@@ -10,8 +11,23 @@ export default function FAQ({ lang }: Props) {
   const [open, setOpen] = useState<number | null>(null)
 
   return (
-    <section style={{ background: 'var(--card)' }}>
-      <div className="max-w-3xl mx-auto px-6 py-24">
+    <section className="relative overflow-hidden" style={{ background: 'var(--card)' }}>
+      {/* Background photo (light mode only) */}
+      <div className="absolute inset-0 pointer-events-none dark:hidden">
+        <Image
+          src="/images/fotodelsur.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          style={{ objectPosition: 'right center', opacity: 0.35 }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(90deg, var(--card) 0%, var(--card) 55%, rgba(255,255,255,0.5) 80%, transparent 100%)' }}
+        />
+      </div>
+
+      <div className="max-w-3xl mx-auto px-6 py-24 relative">
         <h2
           className="font-oswald font-bold uppercase mb-12"
           style={{ fontSize: 'clamp(36px, 5vw, 60px)', color: 'var(--ink)' }}

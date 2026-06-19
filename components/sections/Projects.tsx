@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { T, Lang } from '@/lib/translations'
 
 interface Props { lang: Lang }
@@ -6,8 +7,23 @@ export default function Projects({ lang }: Props) {
   const t = T[lang].projects
 
   return (
-    <section id="proyectos" style={{ background: 'var(--warm)' }}>
-      <div className="max-w-7xl mx-auto px-6 py-24">
+    <section id="proyectos" className="relative overflow-hidden" style={{ background: 'var(--warm)' }}>
+      {/* Background photo (light mode only) */}
+      <div className="absolute inset-0 pointer-events-none dark:hidden">
+        <Image
+          src="/images/fotodelsur2.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          style={{ objectPosition: 'right top', opacity: 0.3 }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(90deg, var(--warm) 0%, var(--warm) 50%, rgba(242,239,232,0.55) 75%, transparent 100%)' }}
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 py-24 relative">
         <h2
           className="font-oswald font-bold uppercase mb-16"
           style={{ fontSize: 'clamp(36px, 5vw, 60px)', color: 'var(--ink)' }}

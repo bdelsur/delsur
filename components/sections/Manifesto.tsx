@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { T, Lang } from '@/lib/translations'
 
 interface Props { lang: Lang }
@@ -10,6 +11,21 @@ export default function Manifesto({ lang }: Props) {
       className="relative py-32 overflow-hidden"
       style={{ background: '#020202' }}
     >
+      {/* Background photo */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/fotodelsur1.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          style={{ opacity: 0.45 }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(90deg, #020202 0%, #020202 35%, rgba(2,2,2,0.4) 70%, rgba(2,2,2,0.7) 100%)' }}
+        />
+      </div>
+
       {/* Ghost SUR */}
       <span
         className="absolute right-0 top-1/2 -translate-y-1/2 font-oswald font-bold select-none pointer-events-none leading-none"
