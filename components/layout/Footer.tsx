@@ -40,7 +40,11 @@ export default function Footer({ lang }: Props) {
             <ul className="space-y-2">
               {t.contact.map(c => (
                 <li key={c}>
-                  <span className="font-dm text-sm" style={{ color: '#A0A0A0' }}>{c}</span>
+                  {c.includes('@') ? (
+                    <a href={`mailto:${c}`} className="font-dm text-sm" style={{ color: '#A0A0A0' }}>{c}</a>
+                  ) : (
+                    <span className="font-dm text-sm" style={{ color: '#A0A0A0' }}>{c}</span>
+                  )}
                 </li>
               ))}
             </ul>
