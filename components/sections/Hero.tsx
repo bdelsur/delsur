@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { T, Lang } from '@/lib/translations'
 
 interface Props {
@@ -35,22 +34,6 @@ export default function Hero({ lang, bannerVisible }: Props) {
           opacity: 0.5,
         }}
       />
-
-      {/* Background photo (dark mode only) */}
-      <div className="absolute inset-0 pointer-events-none hidden dark:block">
-        <Image
-          src="/images/fotodelsur1.jpg"
-          alt=""
-          fill
-          className="object-cover"
-          style={{ objectPosition: 'right center', opacity: 0.5 }}
-          priority
-        />
-        <div
-          className="absolute inset-0"
-          style={{ background: 'linear-gradient(90deg, var(--bg) 0%, var(--bg) 40%, transparent 75%)' }}
-        />
-      </div>
 
       {/* Ghost "SUR" */}
       <span
