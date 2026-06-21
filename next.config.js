@@ -1,5 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'delsur-digital.com',
+          },
+        ],
+        destination: 'https://www.delsur-digital.com/:path*',
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     return [
       {

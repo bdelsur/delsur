@@ -15,7 +15,7 @@ export default function Manifesto({ lang }: Props) {
       <div className="absolute inset-0">
         <Image
           src="/images/fotodelsur1.webp"
-          alt=""
+          alt="Vista aérea de una ballena franca austral en aguas oscuras del sur — DELSUR, publicidad online para conseguir más clientes"
           fill
           className="object-cover"
           style={{ opacity: 0.45 }}

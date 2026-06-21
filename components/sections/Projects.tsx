@@ -12,7 +12,7 @@ export default function Projects({ lang }: Props) {
       <div className="absolute inset-0 pointer-events-none dark:hidden">
         <Image
           src="/images/fotodelsur2.webp"
-          alt=""
+          alt="Dos ballenas francas sumergiéndose juntas — proyectos de Google Ads y CRO para negocios de Valencia"
           fill
           className="object-cover"
           style={{ objectPosition: 'right top', opacity: 0.3 }}
@@ -27,7 +27,7 @@ export default function Projects({ lang }: Props) {
       <div className="absolute inset-0 pointer-events-none hidden dark:block">
         <Image
           src="/images/fotodelsur.webp"
-          alt=""
+          alt="Ballena franca austral sumergiéndose con la cola levantada — casos de éxito en campañas de Google Ads"
           fill
           className="object-cover"
           style={{ objectPosition: 'right top', opacity: 0.2 }}

@@ -16,9 +16,9 @@ export const T = {
     hero: {
       eyebrow: 'Valencia, España',
       available: 'Disponible ahora',
-      h1a: '¿Tenés un negocio',
+      h1a: '¿Tenés un negocio en Valencia',
       h1b: '',
-      h1c: 'y querés más clientes?',
+      h1c: 'y querés más clientes con Google Ads?',
       h1d: 'Te los traigo con publicidad en internet.',
       sub: 'Pongo tu negocio en Google, hago que aparezcas justo cuando buscan lo que vendés. Más llamadas, más presupuestos, más trabajo.',
       location: 'Para negocios de Valencia.',

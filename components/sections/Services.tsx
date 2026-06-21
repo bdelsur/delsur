@@ -12,7 +12,7 @@ export default function Services({ lang }: Props) {
       <div className="absolute inset-0 pointer-events-none dark:hidden">
         <Image
           src="/images/delsur1.webp"
-          alt=""
+          alt="Cola de ballena franca austral a contraluz al atardecer — servicios de Google Ads, GA4 y CRO en Valencia"
           fill
           className="object-cover"
           style={{ objectPosition: 'left top', opacity: 0.2 }}
@@ -27,7 +27,7 @@ export default function Services({ lang }: Props) {
       <div className="absolute inset-0 pointer-events-none hidden dark:block">
         <Image
           src="/images/delsur2.webp"
-          alt=""
+          alt="Ballena franca austral soplando en aguas oscuras — servicios de gestión de Google Ads en Valencia"
           fill
           className="object-cover"
           style={{ objectPosition: 'left top', opacity: 0.18 }}

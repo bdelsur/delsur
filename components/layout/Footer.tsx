@@ -12,7 +12,7 @@ export default function Footer({ lang }: Props) {
       <div className="absolute inset-0 pointer-events-none">
         <Image
           src="/images/fotodelsur1.webp"
-          alt=""
+          alt="Ballena franca austral nadando cerca de la superficie en aguas profundas — DELSUR, gestión de Google Ads en Valencia"
           fill
           className="object-cover"
           style={{ objectPosition: 'right center', opacity: 0.35 }}

@@ -12,7 +12,7 @@ export default function Process({ lang }: Props) {
       <div className="absolute inset-0 pointer-events-none dark:hidden">
         <Image
           src="/images/delsur3.webp"
-          alt=""
+          alt="Ballena franca austral y su cría nadando juntas — proceso de trabajo en campañas de Google Ads"
           fill
           className="object-cover"
           style={{ objectPosition: 'right top', opacity: 0.25 }}
@@ -27,7 +27,7 @@ export default function Process({ lang }: Props) {
       <div className="absolute inset-0 pointer-events-none hidden dark:block">
         <Image
           src="/images/fotodelsur2.webp"
-          alt=""
+          alt="Madre y cría de ballena franca buceando juntas — metodología de gestión de publicidad online"
           fill
           className="object-cover"
           style={{ opacity: 0.2 }}

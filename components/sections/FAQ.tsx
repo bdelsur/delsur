@@ -16,7 +16,7 @@ export default function FAQ({ lang }: Props) {
       <div className="absolute inset-0 pointer-events-none dark:hidden">
         <Image
           src="/images/fotodelsur.webp"
-          alt=""
+          alt="Cola de ballena franca austral levantada sobre aguas turquesas — preguntas frecuentes sobre Google Ads y CRO"
           fill
           className="object-cover"
           style={{ objectPosition: 'right center', opacity: 0.35 }}
@@ -31,7 +31,7 @@ export default function FAQ({ lang }: Props) {
       <div className="absolute inset-0 pointer-events-none hidden dark:block">
         <Image
           src="/images/delsur2.webp"
-          alt=""
+          alt="Ballena franca austral asomando el lomo en aguas oscuras — dudas sobre gestión de Google Ads en Valencia"
           fill
           className="object-cover"
           style={{ objectPosition: 'right center', opacity: 0.22 }}

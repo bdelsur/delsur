@@ -12,7 +12,7 @@ export default function WebDev({ lang }: Props) {
       <div className="absolute inset-0 pointer-events-none dark:hidden">
         <Image
           src="/images/fotodelsur1.webp"
-          alt=""
+          alt="Ballena franca austral nadando en aguas profundas — desarrollo web orientado a conseguir más clientes"
           fill
           className="object-cover"
           style={{ objectPosition: 'right top', opacity: 0.2 }}
@@ -27,7 +27,7 @@ export default function WebDev({ lang }: Props) {
       <div className="absolute inset-0 pointer-events-none hidden dark:block">
         <Image
           src="/images/fotodelsur.webp"
-          alt=""
+          alt="Ballena franca austral sumergiéndose en aguas turquesas — desarrollo web y publicidad para más clientes"
           fill
           className="object-cover"
           style={{ objectPosition: 'right top', opacity: 0.18 }}
