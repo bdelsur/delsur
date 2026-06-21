@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: 'DELSUR',
     images: [
       {
-        url: '/images/delsur1.jpg',
+        url: '/images/delsur1.webp',
         width: 1200,
         height: 630,
         alt: 'DELSUR · Google Ads · GA4 · CRO · Valencia',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'DELSUR · Google Ads · GA4 · CRO · Valencia',
     description: 'Gestión de Google Ads, medición con GA4 y CRO para negocios de Valencia. Más clientes desde Google y datos para saber cuánto te cuesta cada uno.',
-    images: ['/images/delsur1.jpg'],
+    images: ['/images/delsur1.webp'],
   },
 }
 

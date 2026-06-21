@@ -11,7 +11,7 @@ export default function Projects({ lang }: Props) {
       {/* Background photo (light mode only) */}
       <div className="absolute inset-0 pointer-events-none dark:hidden">
         <Image
-          src="/images/fotodelsur2.jpg"
+          src="/images/fotodelsur2.webp"
           alt=""
           fill
           className="object-cover"
@@ -26,7 +26,7 @@ export default function Projects({ lang }: Props) {
       {/* Background photo (dark mode only) */}
       <div className="absolute inset-0 pointer-events-none hidden dark:block">
         <Image
-          src="/images/fotodelsur.jpg"
+          src="/images/fotodelsur.webp"
           alt=""
           fill
           className="object-cover"

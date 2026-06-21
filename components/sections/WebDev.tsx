@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { T, Lang } from '@/lib/translations'
 
 interface Props { lang: Lang }
@@ -6,8 +7,35 @@ export default function WebDev({ lang }: Props) {
   const t = T[lang].webdev
 
   return (
-    <section style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)' }}>
-      <div className="max-w-7xl mx-auto px-6 py-20">
+    <section className="relative overflow-hidden" style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)' }}>
+      {/* Background photo (light mode only) */}
+      <div className="absolute inset-0 pointer-events-none dark:hidden">
+        <Image
+          src="/images/fotodelsur1.webp"
+          alt=""
+          fill
+          className="object-cover"
+          style={{ objectPosition: 'right top', opacity: 0.2 }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(90deg, var(--bg) 0%, var(--bg) 45%, rgba(250,248,244,0.6) 70%, transparent 100%)' }}
+        />
+      </div>
+
+      {/* Background photo (dark mode only) */}
+      <div className="absolute inset-0 pointer-events-none hidden dark:block">
+        <Image
+          src="/images/fotodelsur.webp"
+          alt=""
+          fill
+          className="object-cover"
+          style={{ objectPosition: 'right top', opacity: 0.18 }}
+        />
+        <div className="absolute inset-0" style={{ background: 'var(--bg)', opacity: 0.75 }} />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 py-20 relative">
         {/* Header — visually subordinate to Services */}
         <p
           className="font-dm text-xs uppercase tracking-widest mb-3"

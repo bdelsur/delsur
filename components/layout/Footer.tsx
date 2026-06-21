@@ -11,7 +11,7 @@ export default function Footer({ lang }: Props) {
       {/* Background photo */}
       <div className="absolute inset-0 pointer-events-none">
         <Image
-          src="/images/fotodelsur1.jpg"
+          src="/images/fotodelsur1.webp"
           alt=""
           fill
           className="object-cover"
