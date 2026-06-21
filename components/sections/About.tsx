@@ -13,10 +13,10 @@ export default function About({ lang }: Props) {
           {/* Photo */}
           <div className="relative" style={{ minHeight: '480px' }}>
             <Image
-              src="/images/delsur1.png"
-              alt="Brenda · Delsur"
+              src="/images/delsur1.jpg"
+              alt={lang === 'es' ? 'Ballena · Delsur' : 'Whale · Delsur'}
               fill
-              className="object-contain"
+              className="object-cover"
               priority
             />
 

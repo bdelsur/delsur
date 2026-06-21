@@ -8,6 +8,21 @@ export default function Process({ lang }: Props) {
 
   return (
     <section className="relative overflow-hidden" style={{ background: 'var(--warm)' }}>
+      {/* Background photo (light mode only) */}
+      <div className="absolute inset-0 pointer-events-none dark:hidden">
+        <Image
+          src="/images/delsur3.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          style={{ objectPosition: 'right top', opacity: 0.25 }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(90deg, var(--warm) 0%, var(--warm) 45%, rgba(242,239,232,0.6) 70%, transparent 100%)' }}
+        />
+      </div>
+
       {/* Background photo (dark mode only) */}
       <div className="absolute inset-0 pointer-events-none hidden dark:block">
         <Image
