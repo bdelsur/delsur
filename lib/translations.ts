@@ -95,7 +95,7 @@ export const T = {
       verified: 'Verificado',
       soon: 'Próximamente',
       items: [
-        { label: 'Google Search Ads', active: true },
+        { label: 'Google Search Ads', active: true, url: 'https://skillshop.credential.net/b0497dfd-2a4b-48b6-bc90-2132a2d77755' },
         { label: 'Google Display Ads', active: true },
         { label: 'Google Analytics 4', active: true },
         { label: 'Google Shopping Ads', active: false },
@@ -344,7 +344,7 @@ export const T = {
       verified: 'Verified',
       soon: 'Coming soon',
       items: [
-        { label: 'Google Search Ads', active: true },
+        { label: 'Google Search Ads', active: true, url: 'https://skillshop.credential.net/b0497dfd-2a4b-48b6-bc90-2132a2d77755' },
         { label: 'Google Display Ads', active: true },
         { label: 'Google Analytics 4', active: true },
         { label: 'Google Shopping Ads', active: false },

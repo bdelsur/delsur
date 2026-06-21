@@ -29,10 +29,13 @@ export default function Certifications({ lang }: Props) {
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {t.items.map((cert, i) => (
-            <div
+          {t.items.map((cert, i) => {
+            const Wrapper = cert.url ? 'a' : 'div'
+            return (
+            <Wrapper
               key={cert.label}
-              className="relative p-6"
+              {...(cert.url ? { href: cert.url, target: '_blank', rel: 'noopener noreferrer' } : {})}
+              className="relative p-6 block"
               style={{
                 background: cert.active ? 'var(--card)' : 'transparent',
                 border: cert.active
@@ -74,8 +77,9 @@ export default function Certifications({ lang }: Props) {
                   <span className="font-dm text-xs" style={{ color: 'var(--soft)' }}>{t.soon}</span>
                 </>
               )}
-            </div>
-          ))}
+            </Wrapper>
+            )
+          })}
         </div>
       </div>
     </section>
